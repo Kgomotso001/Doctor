@@ -1,0 +1,26 @@
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid blue;
+   
+    
+}
+th{
+    height: 100%;
+    
+    background-color: blue;
+    color: white;
+    padding: 10px;
+ 
+}
+td{
+    height: 100%;
+    border: 2px solid blue;
+    padding: 9px;
+ 
+}
+table.center{
+    
+    margin-left: auto;
+    margin-right: auto;
+}

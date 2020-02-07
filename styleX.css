@@ -1,0 +1,45 @@
+<style type="text/css">
+
+#stage{
+	margin:1em auto;
+	width:360px;
+	height:270px;
+	border:10px solid black;
+	overflow:hidden;
+	background-color:black;
+}
+#stage a {
+	position:relative;
+	display:inline;
+}
+#stage a::after {
+	position:absolute;
+	top:50%;
+	left:0;
+	transform:translateY(-50%);
+	width:100%;
+	text-align:center;
+	content:attr(title);
+	font-weight:bold;
+	font-size:2em;
+	color:#fff;
+	text-shadow:-1px -1px 0 #333, 1px -1px 0 #333,-1px 1px 0 #333,2px 2px 0 #333;
+	
+}
+#stage a:nth-of-type(2) {
+	left:360px;
+	top:-50%;
+	animation-name:slider;
+	animation-delay:4s;
+	animation-duration:1s;
+	animation-timing-function: cubic-bezier(0,1.5,0.5,1);
+
+}
+#stage a:nth-of-type(n+3) {
+	display:none;
+}
+@keyframes slider{
+	from{transform:translateY(-50%) rotate(30deg);left:360px;}
+	to{transform:translateY(-50%);left:0px}
+}
+</style>
