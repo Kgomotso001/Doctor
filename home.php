@@ -154,7 +154,7 @@ body{
 }
     </style>
 <div class="bookIMG1">
-    <img src="200.jpg" width="50%" height="15%" >
+    <img src="200.jpeg" width="50%" height="15%" >
 		</div> 
     <style>
         .bookIMG1{

@@ -8,21 +8,6 @@
 			<link rel="stylesheet" type="text/css" href="xCSS/css/all.css">
 </head>
 <body>
-
-
-
-	<ul class="nav">
-            <div class="head1">
-			<h2>Max Pharmacy Appointment System</h2>
-			</div>
-			
-               
-                       
-						
-						<li><a href="login.php"><i class="fas fa-user"></i> About Us</a></li>
-						<li><a href="login.php"><i class="fas fa-user"></i> Notice Board</a></li>
-               
-        </ul>
    
   
     <br>
@@ -45,9 +30,6 @@
 		</div>
 		<div>
 		<input type="checkbox" onclick="myFunction()">show password
-		<p>
-			Forgot password? <a href="forgotPassword.php"> Click here</a>
-		</p>
 		</div>
 		
 		<div class="input-group">
@@ -99,8 +81,8 @@ width: 100%;
 }
 body {
 	font-size: 125%;
-	 background: url('4.jpeg') no-repeat;
-    background-size: 1900px 900px;
+	 background: url('300.jpeg') no-repeat;
+    background-size: cover;
     font-family: Arial;
        
  

@@ -155,41 +155,6 @@ if (!preg_match("#\W+#", $password)) {
 			}
 		}
 	}
-	
-	if (isset($_POST['forgot'])) {
-		
-		$password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
-		$password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-		
-		if (empty($password_1)) { array_push($errors, "Password is required"); }
-               
-		if ($password_1 != $password_2) {
-			array_push($errors, "The two passwords do not match");
-		}
-		
-		//------------------------------------------------
-		$password=$password_1;
-		//----------------------------------------
-		if (!preg_match("#[0-9]+#", $password)) {
 
-
-    array_push($errors, "Password must include at least one number! ");
-}
-
-if (strcspn($password, '') != strlen($password)) {
-
-    array_push($errors, "Password must include at least one letter! ");
-}
-
-if (!preg_match("#[A-Z]+#", $password)) {
-
-    array_push($errors, "Password must include at least one CAPS! ");
-}
-
-if (!preg_match("#\W+#", $password)) {
-
-    array_push($errors, "Password must include at least one symbol! ");
-}
-	}
 
 ?>

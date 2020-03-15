@@ -7,18 +7,10 @@
         <link rel="stylesheet" type="text/css" href="xCSS/css/all.css">
 </head>
 <body>
-<ul class="nav">
-            
-			
-               
-                        <li><a href="login.php"><i class="fas fa-user"></i> Login</a></li>
-						
-               
-        </ul>
 
 
 	<div class="header">
-		<h2>Patient Registration</h2>
+		<h2>Client Registration</h2>
 	</div>
 	
 	<form method="post" action="register.php">
@@ -93,8 +85,8 @@ width: 100%;
 }
 body {
 	font-size: 125%;
-	 background: url('70.jpeg') no-repeat;
-    background-size: center;
+	 background: url('300.jpeg') no-repeat;
+    background-size: cover;
     font-family: Arial;
        
  

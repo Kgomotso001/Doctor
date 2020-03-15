@@ -19,11 +19,13 @@
 <body>
  <ul class="nav">
             <div class="head1">
-			<h2>Max Pharmacy Appointment System</h2>
+			<h2>Doctors Appointment System</h2>
 			</div>
      <li><a href="admin_home.php"><i class="fas fa-home"></i>  Home</a></li>
-               <li><a href="admin_view_bookings.php"><i class="fas fa-clipboard-list"></i>View Bookings</a></li>
+               <li><a href="search.php"><i class="fas fa-clipboard-list"></i>Search Bookings</a></li>
+            	<li><a href="admin_view_bookings.php"><i class="fas fa-clipboard-list"></i>View All Bookings</a></li>
             
+      
             
             <li><a href="logout.php"> <i class="fas fa-power-off"></i> Logout</a></li>
           

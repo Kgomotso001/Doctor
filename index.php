@@ -26,14 +26,11 @@
    
 	<ul class="nav">
             <div class="head1">
-			<h2>Max Pharmacy Appointment System</h2>
+			<h2>Doctors Appointment System</h2>
 			</div>
 			
                
                         <li><a href="login.php"><i class="fas fa-user"></i> Login</a></li>
-						<li><a href="register.php"><i class="fas fa-user"></i> Register</a></li>
-						<li><a href="login.php"><i class="fas fa-user"></i> About Us</a></li>
-						<li><a href="login.php"><i class="fas fa-user"></i> Notice Board</a></li>
                
         </ul>
     <style>
@@ -147,9 +144,19 @@ body{
     
  
 }
+
+    
+        /* Style the footer */
+        .footer {
+        background-color: blue;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        }
+
     </style>
 <div class="bookIMG1">
-    <img src="200.jpg" width="50%" height="15%" >
+    <img src="200.jpeg" width="50%" height="15%" >
 		</div> 
     <style>
         .bookIMG1{
@@ -180,26 +187,21 @@ echo $now->format('D M j Y');
     <br>
     <br>
     <div class="message">
-         To make a booking for your appointment just click the link below or login <br>
-         know  that you our working hours is 24/7,<br>
+         To make a booking for your appointment just click the link below or login in first <br>
+         know  that you our working hours start from 09h00 until 19h00,<br>
          Thank you for visiting us!!!<br>
          <a href="login.php">Click Here</a>
         </div>
 <br>	
-<footer>&COPY;Copyrights reserved to Max Pharmacy(PTY)LTD</footer>
+<footer class="footer">Copyright &COPY;2020 A Bongongo</footer>
  <style>
         .message{
             text-align: center;
             font-size: 20px;
-          
-        }
-        footer{
-            text-align: right;
-            font-weight: bold;
-        }
+      
     </style>
-    
 </body>
+
 <script src = "../js/jquery.js"></script>
 <script src = "../js/bootstrap.js"></script>
 </html>

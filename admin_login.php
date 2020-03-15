@@ -52,7 +52,7 @@ width: 100%;
 }
 body {
 	font-size: 125%;
-	 background: url('doc.jpg') no-repeat;
+	 background: url('300.jpeg') no-repeat;
     background-size: cover;
     font-family: Arial;
        

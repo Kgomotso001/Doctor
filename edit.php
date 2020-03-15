@@ -1,17 +1,39 @@
-<?php include ('connect.php');?>
+<?php 
+
+    $conn = new mysqli("localhost", "root", "", "appointment") or die(mysqli_error());
+
+    if(isset($_GET['edit']))
+    {
+        $id = $_GET['edit'];
+        $res = mysqli_query($conn, "SELECT * FROM booking WHERE book_id='$id'");
+        $fetch = mysqli_fetch_array($res);
+
+    }
+
+    if(isset($_POST['newStatus']))
+    {
+        $newStatus = $_POST['newStatus'];
+        $id = $_POST['id'];
+        $sql = "UPDATE booking SET status = '$newStatus' WHERE book_id='$id'";
+        $res = mysqli_query($conn, $sql ) or die("Could not update status".mysqli_error());
+        echo "<meta http-equiv='refresh' content = '0;url=admin_view_bookings.php'>";
+    }
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Schedule </title>
 	<meta name="viewport" content="width:device-width,initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	
         <link rel="stylesheet" type="text/css" href="tbStyle.css">
         <link rel="stylesheet" type="text/css" href="style1.css">
 		<link rel = "stylesheet" type = "text/css" href = "styleX.css" />
 		<link rel="stylesheet" type="text/css" href="xCSS/css/all.css">
                 <link rel = "stylesheet" type = "text/css" href = "../css/bootstrap.css " />
 		<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
-                
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
 </head>
 <body>
@@ -42,30 +64,44 @@
                 <th>Contact</th>
                 <th>Purpose</th>
                 <th>Status</th>
+		<th>Prescriptions</th>
             </tr>
 	</thead>
 	<tbody>
-            <?php  
-		$query = $conn->query("SELECT * FROM booking") or die(mysqli_error());
-		while($fetch = $query->fetch_array()){
-            ?>
-						
-                <tr>
-                    <td><?php echo $fetch['book_id']?></td>
-                    <td><?php echo $fetch['b_time']?></td>
-                    <td><?php echo $fetch['b_date']?></td>
-                    <td><?php echo ($fetch['b_id'])?></td>
-                    <td><?php echo $fetch['b_name']?></td>
-                    <td><?php echo $fetch['b_surname']?></td>
-                    <td><?php echo $fetch['b_contact']?></td>
-                    <td><?php echo ($fetch['purpose'])?></td>
-                    <td ><?php echo "$fetch[status] <a href='edit.php?edit=$fetch[book_id]'><i  class='fas fa-edit'></a></i>";?></td>					
-		</tr>
-		<?php
-		}
-		?>
-                
-                
+        <tr>
+            <td><?php echo $fetch['book_id']?></td>
+            <td><?php echo $fetch['b_time']?></td>
+            <td><?php echo $fetch['b_date']?></td>
+            <td><?php echo ($fetch['b_id'])?></td>
+            <td><?php echo $fetch['b_name']?></td>
+            <td><?php echo $fetch['b_surname']?></td>
+            <td><?php echo $fetch['b_contact']?></td>
+            <td><?php echo ($fetch['purpose'])?></td>
+            <td >
+                <form action = "edit.php" method="POST" style="clear">
+                <input type="text" name = "newStatus" value = "<?php echo $fetch[8]; ?>">
+                <input type="hidden" name = "id" value = "<?php echo $fetch[0]; ?>">
+                   
+                       
+                    
+                </form>
+            </td>
+		
+		 <td >
+                <form action = "edit.php" method="POST" style="clear">
+           
+  		<input type="text" id="lname" name="lname"><br><br>
+                    <button type = "submit">
+                        <i class="fas fa-save"></i>
+                    </button>
+                </form>
+            </td>
+
+
+
+
+					
+		</tr>       
 	</tbody>
 </table>
      <style>
