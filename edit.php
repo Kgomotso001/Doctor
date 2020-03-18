@@ -64,7 +64,6 @@
                 <th>Contact</th>
                 <th>Purpose</th>
                 <th>Status</th>
-		<th>Prescriptions</th>
             </tr>
 	</thead>
 	<tbody>
@@ -81,26 +80,14 @@
                 <form action = "edit.php" method="POST" style="clear">
                 <input type="text" name = "newStatus" value = "<?php echo $fetch[8]; ?>">
                 <input type="hidden" name = "id" value = "<?php echo $fetch[0]; ?>">
-                   
+                <button type = "submit">
+                <i class="fas fa-save"></i>  
                        
                     
                 </form>
             </td>
 		
-		 <td >
-                <form action = "edit.php" method="POST" style="clear">
-           
-  		<input type="text" id="lname" name="lname"><br><br>
-                    <button type = "submit">
-                        <i class="fas fa-save"></i>
-                    </button>
-                </form>
-            </td>
-
-
-
-
-					
+		 					
 		</tr>       
 	</tbody>
 </table>
